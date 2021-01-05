@@ -13,8 +13,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
 
     <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
-
-
+    
     <script src="js/main.js"></script>
 </head>
 <body>
@@ -106,7 +105,6 @@
         <div class="modal fade" id="edit-usuario" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
           
         </div>
-
 
     </div>
 </body>

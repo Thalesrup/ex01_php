@@ -4,12 +4,9 @@ listarUsuarios();
 
 
 var tbodyUsuarios      = $('#listagemUsuarios');
-var btnUpdate          = $('#btnUpdate');
 var modalEditarUsuario = $('#edit-usuario');
 var modalInserirUsuario= $('#create-usuario');
 var formInserir        = $('#formInserirUsuario');
-var deletarUsuario     = $('.deleteBtn');
-var updateUsuario      = $('#salvarEdicao');
 var formUpdateUsuario  = $('#edit-usuario');
 var btnGerarXML        = $('#gerarXMLUsuarios'); 
 
@@ -66,9 +63,8 @@ $(this).submit(function(e){
 				msgErro('Falha', callback.msg);
 			}
 			if(!callback.error){
-				msgSucesso('Sucesso', callback.msg);
+				msgSucesso('Sucesso', callback.msg, false, true);
 				fecharFormulario(formUpdateUsuario);
-				location.reload();
 			}
 		}
 	});
@@ -130,7 +126,7 @@ function listarUsuarios(){
 	});
 }
 
-function msgSucesso(title ,msgBody, callbackLinkDownload = false){
+function msgSucesso(title ,msgBody, callbackLinkDownload = false, refresh = false){
         $.confirm({
             title: title,
             content: msgBody,
@@ -143,30 +139,33 @@ function msgSucesso(title ,msgBody, callbackLinkDownload = false){
                     	if(callbackLinkDownload){
                     		window.open(callbackLinkDownload);
                     	}
+                    	if(refresh){
+                    		location.reload();
+						}
                     }
                 }
             }
         });
     }
 
- function msgErro(title ,msgBody){
-        $.dialog({
-            title: title,
-            content: msgBody,
-            type: 'red',
-        });
-    }
+function msgErro(title ,msgBody){
+    $.dialog({
+	  title: title,
+      content: msgBody,
+      type: 'red',
+    });
+}
 
-    function limparFormulario(elemento){
-        $(elemento).each(function(){
-            this.reset();
-        });
-    }
+function limparFormulario(elemento){
+  $(elemento).each(function(){
+     this.reset();
+  });
+}
 
 
-    function fecharFormulario(elemento){
-    	elemento.modal('hide');
-    }
+function fecharFormulario(elemento){
+  elemento.modal('hide');
+}
 
 
 });
