@@ -26,3 +26,6 @@ Uma Ideia de Como pode ser feito http://webserver666.online/spaPHP
 (Melhor forma de implementar as modais, fragmentar o arquivo main.js que contem todo o projeto)
 
 Teste voltado totalmente para parte acadêmica.
+
+### Dúvidas
+thales.rup@gmail.com
