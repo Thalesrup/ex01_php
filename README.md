@@ -5,6 +5,8 @@
 ###### 
 ## About Exercício
 Desenvolver um Crud com PHP, mysql, jquery (ajax)
+Uma Ideia de Como pode ser feito http://webserver666.online/spaPHP 
+(Foi Desenvolvido Apenas de forma acadêmica, não foram aplicados padrões de desenvolvimento)
 ###### 
 
 ### Desafios
