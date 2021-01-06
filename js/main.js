@@ -87,9 +87,8 @@ formInserir.submit(function(evento){
               }
             if (!callback.error){
            		limparFormulario(formInserir);
-            	msgSucesso('Sucesso', callback.msg);
+            	msgSucesso('Sucesso', callback.msg, false, true);
             	fecharFormulario(modalInserirUsuario);
-            	location.reload();
             }
 		}
 	});
@@ -107,8 +106,7 @@ window.deletarUsuario = function(id){
 				msgErro('Falha', callback.msg);
 			}
 			if(!callback.error){
-				msgSucesso('Sucesso', callback.msg);
-				location.reload();
+				msgSucesso('Sucesso', callback.msg, false, true);
 			}
 		}
 	});
